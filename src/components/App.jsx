@@ -1,8 +1,12 @@
+import exampleVideoData from '../data/exampleVideoData.js';
 import VideoList from './VideoList.js'
 import VideoPlayer from './VideoPlayer.js'
 import Search from './Search.js'
 
-var App = (props) => (
+
+var App = () => {
+  
+  return(
   <div>
     <nav className="navbar">
       <div className="col-md-6 offset-md-3">
@@ -11,24 +15,19 @@ var App = (props) => (
     </nav>
     <div className="row">
       <div className="col-md-7">
-        <VideoPlayer />
+        <VideoPlayer video = {exampleVideoData}/>
       </div>
       <div className="col-md-5">
-        <VideoList />
+        <VideoList videos = {exampleVideoData}/>
       </div>
     </div>
   </div>
-);
+  );
+};
 
 
 
-/*var helperVideoList = (props) => (
-  <ul>
-    {props.videoList.map(calledVideoItem =>
-      <App videoItem={calledVideoItem} />
-    )}
-  </ul>
-)*/
+
 
 
 
